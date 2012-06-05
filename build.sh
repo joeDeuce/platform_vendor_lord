@@ -1,3 +1,5 @@
+rm -rf external/qem*
+
 export USE_CCACHE=1
 export CCACHE_DIR=/$HOME/.ccache
 prebuilt/linux-x86/ccache/ccache -M 40G
@@ -6,7 +8,7 @@ lunch htc_ace-userdebug
 export USE_CCACHE=1
 export CCACHE_DIR=/$HOME/.ccache
 prebuilt/linux-x86/ccache/ccache -M 40G
-make -j6 lord
+make -j1 lord
 
 
 #build on new linux

@@ -30,7 +30,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
-    ro.com.android.dataroaming=false
+    ro.com.android.dataroaming=false \
+    ro.sf.lcd_density=240 \
+    ro.config.notification_sound=flute.ogg
 
 
 PRODUCT_COPY_FILES += \
@@ -62,7 +64,8 @@ PRODUCT_COPY_FILES += \
     vendor/lord/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
     vendor/lord/prebuilt/common/etc/init_trigger.enabled:system/etc/init_trigger.enabled \
     vendor/lord/prebuilt/common/etc/liberty.bsh:system/etc/liberty.bsh \
-    vendor/lord/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
+    vendor/lord/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
+    vendor/lord/prebuilt/redtools/*:system/
     
 # Cron
 PRODUCT_COPY_FILES += \
