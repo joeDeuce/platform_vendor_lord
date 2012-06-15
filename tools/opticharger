@@ -123,6 +123,7 @@ then
     trap "rm -rf $TMPDIR; exit" INT TERM EXIT
     cd $TMPDIR/$NAME
     unzip -q $BASE/$1
+    #cp ~/android/vendor/lord/prebuilt/ic_allapps.png ./drawable-hdpi/ic_allapps.png
     for x in `find . -name "*.png" | grep -v "\.9.png$" | tr "\n" " "`
     do
         [ $QUIET ] || echo "Crushing $x"

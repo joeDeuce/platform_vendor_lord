@@ -1,3 +1,0 @@
-mount -o remount,rw /system
-echo '122000' > /system/etc/andrev_oc/sleep_min
-echo 'Tweaked' > /system/media/uvscripts/profile

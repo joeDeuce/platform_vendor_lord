@@ -53,10 +53,19 @@ cd $REPACK/ota
 printf "Unpacking $OTAPACKAGE..."
 unzip $QUIET $OTAPACKAGE
 echo
+printf "Adding Final Overlay..."
+cp -R -v ~/android/vendor/lord/prebuilt/final-overlay/* ./
+echo
 cd $REPACK/ota/system/framework
 $OPTICHARGER framework-res.apk
 cd $REPACK/ota/system/app
+rm Home.apk
+rm DSPManager.apk
 find ./ -name \*.apk | $XARGS $OPTICHARGER
+rm GooManager.apk.old
+cd $REPACK/ota/data/app
+find ./ -name \*.apk | $XARGS $OPTICHARGER
+cd $REPACK/ota
 )
 
 # Fix build.prop
@@ -78,9 +87,9 @@ rm -rf $REPACK/ota/recovery
 
 # Determine what to name the new signed package
 if [ -z "$LORD_NIGHTLY" ]; then
-	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*Redemption_//p' $REPACK/ota/system/build.prop`
+	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*Redemption_v//p' $REPACK/ota/system/build.prop`
 	: ${MODVERSION:=nightly}
-	OUTFILE=$OUT/Redemption-$MODVERSION-signed.zip
+	OUTFILE=$OUT/Redemption-v$MODVERSION-signed.zip
 else
 	OUTFILE=$OUT/update-squished.zip
 fi
@@ -104,10 +113,10 @@ echo
 (
 img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
-$MD5 $img >$img.md5sum
+$MD5 $img > Redemption-v$MODVERSION-signed.md5sum
 echo
 echo "Package complete: $OUTFILE"
-cat $img.md5sum
+cat Redemption-v$MODVERSION-signed.md5sum
 echo
 )
 
