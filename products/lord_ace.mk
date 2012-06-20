@@ -10,9 +10,8 @@ $(call inherit-product-if-exists, vendor/google/google-vendor.mk)
 # Inherit proprietary qcom stuff.
 $(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
 
-# Common Files
-PRODUCT_COPY_FILES += \
-	vendor/lord/prebuilt/media/IceColdBoot404Edition.zip:system/media/bootanimation.zip \
+PRODUCT_PACKAGES += \
+        Gotham
 
 #
 # Setup device specific product configuration.
