@@ -59,8 +59,8 @@ echo
 cd $REPACK/ota/system/framework
 $OPTICHARGER framework-res.apk
 cd $REPACK/ota/system/app
-rm Home.apk
-rm DSPManager.apk
+rm Trebuchet.apk
+# rm DSPManager.apk
 find ./ -name \*.apk | $XARGS $OPTICHARGER
 rm GooManager.apk.old
 cd $REPACK/ota/data/app
@@ -89,7 +89,7 @@ rm -rf $REPACK/ota/recovery
 if [ -z "$LORD_NIGHTLY" ]; then
 	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*Redemption_v//p' $REPACK/ota/system/build.prop`
 	: ${MODVERSION:=nightly}
-	OUTFILE=$OUT/Redemption-v$MODVERSION-signed.zip
+	OUTFILE=$OUT/Redemption-v$MODVERSION.zip
 else
 	OUTFILE=$OUT/update-squished.zip
 fi
@@ -113,10 +113,10 @@ echo
 (
 img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
-$MD5 $img > Redemption-v$MODVERSION-signed.md5sum
+$MD5 $img > Redemption-v$MODVERSION.md5sum
 echo
 echo "Package complete: $OUTFILE"
-cat Redemption-v$MODVERSION-signed.md5sum
+cat Redemption-v$MODVERSION.md5sum
 echo
 )
 
