@@ -12,7 +12,7 @@ export CCACHE_DIR=/$HOME/.ccache
 prebuilt/linux-x86/ccache/ccache -M 40G
 
 
-make -j2 lord
+make -j1 lord
 
 #build on new linux
 # make CC=gcc-4.4 CXX=g++-4.4 lord -j6

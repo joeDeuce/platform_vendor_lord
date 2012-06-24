@@ -61,7 +61,7 @@ $OPTICHARGER framework-res.apk
 cd $REPACK/ota/system/app
 rm Trebuchet.apk
 rm Home.apk
-# rm DSPManager.apk
+rm DSPManager.apk
 find ./ -name \*.apk | $XARGS $OPTICHARGER
 rm GooManager.apk.old
 cd $REPACK/ota/data/app
