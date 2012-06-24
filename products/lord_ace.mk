@@ -12,7 +12,7 @@ $(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
 
 PRODUCT_PACKAGES += \
         Gotham
-
+        Achromatic
 #
 # Setup device specific product configuration.
 #
