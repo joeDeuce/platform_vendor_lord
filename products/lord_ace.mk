@@ -11,8 +11,8 @@ $(call inherit-product-if-exists, vendor/google/google-vendor.mk)
 $(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
 
 PRODUCT_PACKAGES += \
-        Gotham \
-        Achromatic
+        Gotham
+
 #
 # Setup device specific product configuration.
 #
@@ -25,9 +25,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=PRODUCT_NAME=htc_ace BUILD_ID=
 PRODUCT_PLATFORM_VERSION := 4.0.4
 
 PRODUCT_VERSION_MAJOR = 1
-PRODUCT_VERSION_MINOR = 1
-PRODUCT_VERSION_MAINTENANCE = Alpha22
-PRODUCT_VERSION_GOOAOKP = 10100221
+PRODUCT_VERSION_MINOR = 2
+PRODUCT_VERSION_MAINTENANCE = 3-BETA
+PRODUCT_VERSION_GOOAOKP = 10200031
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=IMM76I
 
 PRODUCT_PROPERTY_OVERRIDES += \
