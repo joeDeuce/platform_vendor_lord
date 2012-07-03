@@ -1,2 +1,0 @@
-mount -o remount,rw /system
-echo '1920000' > /system/etc/andrev_oc/sleep_max

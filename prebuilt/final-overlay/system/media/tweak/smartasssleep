@@ -1,3 +1,0 @@
-mount -o remount,rw /system
-echo 'smartass' > /system/etc/andrev_oc/sleep_gov
-
