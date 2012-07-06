@@ -11,7 +11,8 @@ $(call inherit-product-if-exists, vendor/google/google-vendor.mk)
 $(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
 
 PRODUCT_PACKAGES += \
-        Gotham
+        Gotham \
+	Gallery2
 
 #
 # Setup device specific product configuration.
@@ -26,8 +27,8 @@ PRODUCT_PLATFORM_VERSION := 4.0.4
 
 PRODUCT_VERSION_MAJOR = 1
 PRODUCT_VERSION_MINOR = 2
-PRODUCT_VERSION_MAINTENANCE = 4-BETA
-PRODUCT_VERSION_GOOAOKP = 10200041
+PRODUCT_VERSION_MAINTENANCE = 5-BETA
+PRODUCT_VERSION_GOOAOKP = 10200051
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=IMM76I
 
 PRODUCT_PROPERTY_OVERRIDES += \
