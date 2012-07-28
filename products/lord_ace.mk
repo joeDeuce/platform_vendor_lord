@@ -11,7 +11,8 @@ $(call inherit-product-if-exists, vendor/google/google-vendor.mk)
 $(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
 
 PRODUCT_PACKAGES += \
-        Gotham
+        Gotham \
+	Camera
 
 #
 # Setup device specific product configuration.
